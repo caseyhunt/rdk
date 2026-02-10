@@ -1,0 +1,124 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/slider_pg_layout.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<nav>
+    <img src="logo.png" id="nav-logo">
+    <ul id="top-nav">
+        <li><a href="#home" >Home</a></li>
+        <li><a href="#news">Print Your Own RDK</a></li>
+        <li><a href="#contact">Parts List</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</nav>
+<main>
+<h1>fine tune your fit → static connectors → 60° connector cap</h1>
+<div id="layout">
+    <div id="model-viewer">
+    <model-viewer id="model" loading="eager" camera-controls interpolation-decay="200" tone-mapping="aces" src="/angle_join.glb" shadow-intensity="1" alt="3D model of " exposure="0.7"></model-viewer>    
+    </div>
+
+    <div id="sliders">
+        
+        <div class="form-group">
+            <fieldset>
+            <legend>Intensity</legend>
+            <div class="dot-slider" data-group="1">
+                <button type="button" data-mat="1" aria-label="Previous intensity" class="prev-btn">◁</button>
+
+                <label class="dot-option">
+                <input type="radio" name="1" data-mat="1" value="1" >
+                <span class="dot"></span>
+                <span class="value-label">1</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio" name="1" data-mat="1" value="2" checked >
+                <span class="dot"></span>
+                <span class="value-label">2</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio" name="1" data-mat="1" value="3" >
+                <span class="dot"></span>
+                <span class="value-label">3</span>
+                </label>
+
+                <button type="button" data-mat="1" aria-label="Next intensity" class="next-btn">▷</button>
+            </div>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <fieldset>
+            <legend>Speed</legend>
+            <div class="dot-slider" data-group="2">
+                <button type="button" data-mat="2" aria-label="Previous speed" class="prev-btn">◁</button>
+
+                <label class="dot-option">
+                <input type="radio" name="2" data-mat="2" value="Low" >
+                <span class="dot"></span>
+                <span class="value-label">Low</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio" name="2" data-mat="2" value="Medium" checked >
+                <span class="dot"></span>
+                <span class="value-label">Medium</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio" name="2" data-mat="2" value="High" >
+                <span class="dot"></span>
+                <span class="value-label">High</span>
+                </label>
+
+                <button type="button" data-mat="2" aria-label="Next speed" class="next-btn">▷</button>
+            </div>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <fieldset>
+            <legend>Direction</legend>
+            <div class="dot-slider" data-group="3">
+                <button type="button" data-mat="3" aria-label="Previous direction" class="prev-btn">◁</button>
+
+                <label class="dot-option">
+                <input type="radio" name="3" data-mat="3" value="Left" >
+                <span class="dot"></span>
+                <span class="value-label">Left</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio" name="3" data-mat="3" value="Center" checked>
+                <span class="dot"></span>
+                <span class="value-label">Center</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio"  name="3" data-mat="3" value="Right">
+                <span class="dot"></span>
+                <span class="value-label">Right</span>
+                </label>
+
+                <button type="button" data-mat="3" aria-label="Next direction" class="next-btn">▷</button>
+            </div>
+            </fieldset>
+        </div>
+            <button id="download"><img src="download.png" id="download-icon"><span>download model</span></button>
+        
+    </div>
+</div>
+</main>
+<script src="scripts/slider_script.js"></script>
+<script src="scripts/model_script.js"></script>
+
+</body>
+</html>

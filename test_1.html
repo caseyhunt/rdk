@@ -1,0 +1,71 @@
+<button data-mat="1">change color 1</button>
+<button data-mat="2">change color 2</button>
+<button data-mat="3">change color 3</button>
+<button id="reset">reset</button>
+<script>
+    const modelViewer = document.querySelector("model-viewer#test");
+    let selected = false;
+    const baseColor = [0.6, 0.6, 0.6];
+    const highlight = [30/255, 217/255, 255/255];
+    let activeMaterial, rafId, material;
+
+modelViewer.addEventListener('load', () => {
+    material = modelViewer.model.materials;
+    console.log(material)
+    for (m in material){
+        console.log(material[m]);
+        material[m].pbrMetallicRoughness.setBaseColorFactor(baseColor);
+    }
+    
+    
+});
+
+function startPulse(materialIndex) {
+    stopPulse(); // stop any existing animation
+    
+    activeMaterial = material[materialIndex];
+    if (!activeMaterial) return;
+
+    const startTime = performance.now();
+
+    function pulse(t) {
+      const k = 0.5 + 0.5 * Math.sin(t * 0.0035);
+
+      activeMaterial.pbrMetallicRoughness.setBaseColorFactor([
+        baseColor[0] * (1 - k) + highlight[0] * k,
+        baseColor[1] * (1 - k) + highlight[1] * k,
+        baseColor[2] * (1 - k) + highlight[2] * k
+      ]);
+
+      rafId = requestAnimationFrame(pulse);
+    }
+
+    rafId = requestAnimationFrame(pulse);
+  }
+
+  function stopPulse() {
+    if (rafId) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+
+    if (activeMaterial) {
+      activeMaterial.pbrMetallicRoughness.setBaseColorFactor(baseColor);
+      activeMaterial = null;
+    }
+  }
+
+  // Button wiring (scales nicely)
+  document.querySelectorAll('button[data-mat]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        
+      const index = Number(btn.dataset.mat);
+      startPulse(index);
+    });
+  });
+
+  document.querySelector('#reset').addEventListener('click', stopPulse);
+
+    
+    
+  </script>

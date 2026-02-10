@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: #2e2f33;
+}
+nav {
+    background-color: #edeff3;
+    border-bottom:solid #edeff3;
+    overflow: hidden;
+    display:flex;
+    justify-content: space-between;
+    padding: 40px 60px 20px 60px;
+    align-items: flex-end;
+  }
+
+ 
+  
+
+#nav-logo{
+    width: 350px;
+    height:auto;
+}
+
+ul#top-nav{
+    list-style:none;
+    display: flex;
+    font-size:135%;
+    gap: 40px;
+    margin:0;
+}
+
+ul#top-nav > li > a{
+    text-decoration:none;
+    color: #2e2f33;
+    border-right: solid #2e2f33; /* Adds the vertical line */
+    padding:0px 7px;
+}
+
+ul#top-nav > li > a {
+    border-right: none; /* Removes the border from the last item */
+  }
+
+
+ul#top-nav > li > a.active{
+    text-decoration:underline;
+    font-weight:bolder;
+    color: #2e2f33;
+}
+
+ul#top-nav > li > a:hover{
+    text-decoration:none;
+    font-weight:bolder;
+    background-color: #eeb868;
+}
