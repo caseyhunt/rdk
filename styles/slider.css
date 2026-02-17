@@ -2,9 +2,13 @@ legend{
   display: block;
 }
 fieldset {
-    padding-top: 35px;
-    margin-bottom: 35px;
+    padding-top: 45px;
     border: none;
+}
+
+.form-group{
+  padding:10px;
+  margin:10px;
 }
 
 .form-group:focus-within {
@@ -21,6 +25,7 @@ fieldset {
   background: none;
   border: none;
   margin-right: -10px;  /* cheating to make it display with even spacing */
+  font-size:110%;
 }
 .dot-slider {
   display: flex;
@@ -40,6 +45,10 @@ fieldset {
   border-radius: 50%;
   border: 2px solid #666;
   display: inline-block;
+}
+
+legend{
+  font-size:120%;
 }
 
 input:checked + .dot {

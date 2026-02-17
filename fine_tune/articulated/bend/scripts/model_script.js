@@ -3,15 +3,16 @@ let selected = false;
 const baseColor = [1, 1, 1];
 let highlight = [80/255, 200/255, 230/255];
 const orbitCycle = [
-  '-20deg 65deg 8.2m',
-  '180deg 70deg 8.2m',
-  '175deg 85deg 8.2m'
+  "180deg 70deg 10m",
+  "180deg 85deg 9m",
+  '175deg 85deg 9m'
   
 ];
 let activeMaterial, rafId, material;
 
 modelViewer.addEventListener('load', () => {
 material = modelViewer.model.materials;
+//material = [material[0], material[3], material[2], material[1]];
 console.log(material)
 for (m in material){
     material[m].pbrMetallicRoughness.setBaseColorFactor(baseColor);
