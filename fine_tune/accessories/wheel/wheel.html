@@ -1,0 +1,107 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../../../styles/slider.css">
+    <link rel="stylesheet" href="../../../styles/slider_pg_layout.css">
+    <link rel="stylesheet" href="../../../styles/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<nav>
+    <img src="../../../images/logo.png" id="nav-logo">
+    <ul id="top-nav">
+        <li><a href="../../../home.html" >Home</a></li>
+        <li><a href="../../../print_rdk.html">Print Your Own RDK</a></li>
+        <li><a href="../../../fine_tune.html">Parts List</a></li>
+    </ul>
+</nav>
+<main>
+<h1 id="site-map"><a href="../../../fine_tune.html">fine tune your fit</a> → wheel</h1>
+<div id="layout">
+    <div id="model-viewer">
+    <model-viewer id="model" loading="eager" camera-controls interpolation-decay="200" tone-mapping="aces" src="../../../model_files/glb/wheel.glb" shadow-intensity="1" alt="3D model of wheel" exposure="0.5"></model-viewer>    
+    </div>
+
+    <div id="sliders">
+        
+        <div class="form-group">
+            <fieldset>
+            <legend>cap diameter</legend>
+            <div class="dot-slider" data-group="1">
+                <button type="button" data-mat="1" aria-label="Previous speed" class="prev-btn">◁</button>
+                
+                <label class="dot-option">
+                <input type="radio" name="1" data-mat="1" value="21.1" >
+                <span class="dot"></span>
+                <span class="value-label">21.1 mm</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio" name="1" data-mat="1" value="21.3" checked >
+                <span class="dot"></span>
+                <span class="value-label">21.3 mm</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio" name="1" data-mat="1" value="21.5" >
+                <span class="dot"></span>
+                <span class="value-label">21.5 mm</span>
+                </label>
+
+                <button type="button" data-mat="1" aria-label="Next speed" class="next-btn">▷</button>
+            </div>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <fieldset>
+            <legend>cap taper tolerance</legend>
+            <div class="dot-slider" data-group="2">
+                <button type="button" data-mat="2" aria-label="Previous direction" class="prev-btn">◁</button>
+                <label class="dot-option">
+                    <input type="radio" name="2" data-mat="2" value="0.4" >
+                    <span class="dot"></span>
+                    <span class="value-label">0.4 mm</span>
+                </label>
+    
+                <label class="dot-option">
+                <input type="radio" name="2" data-mat="2" value="0.5" checked>
+                <span class="dot"></span>
+                <span class="value-label">0.5 mm</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio" name="2" data-mat="2" value="0.6" checked>
+                <span class="dot"></span>
+                <span class="value-label">0.6 mm</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio" name="2" data-mat="2" value="0.7">
+                <span class="dot"></span>
+                <span class="value-label">0.7 mm</span>
+                </label>
+
+                <label class="dot-option">
+                <input type="radio"  name="2" data-mat="2" value="0.8">
+                <span class="dot"></span>
+                <span class="value-label">0.8 mm</span>
+                </label>
+
+                <button type="button" data-mat="2" aria-label="Next direction" class="next-btn">▷</button>
+            </div>
+            </fieldset>
+        </div>
+            <a id="download_link" href="../../../model_files/model_download/connectors/wheel/wheel_21.3_0.7.stl" download style="display:none;"></a>
+            <button id="download_button"><img src="../../../images/download.png" id="download-icon"><span>download model</span></button>
+        
+    </div>
+</div>
+</main>
+<script src="scripts/slider_script.js"></script>
+<script src="scripts/model_script.js"></script>
+
+</body>
+</html>

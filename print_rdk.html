@@ -1,1 +1,101 @@
-print
+<html>
+<head>
+    <link rel="stylesheet" href="styles/print_rdk_pg_layout.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+<nav>
+<img src="../../../images/logo.png" id="nav-logo">
+    <ul id="top-nav">
+        <li><a href="../../../home.html" >Home</a></li>
+        <li><a href="../../../print_rdk.html">Print Your Own RDK</a></li>
+        <li><a href="../../../fine_tune.html">Parts List</a></li>
+    </ul>
+</nav>
+<main>
+<div id="page_title">
+<h1>print your own robot development kit</h1>
+</div>
+<div class="steps" id="tolerance">
+    <h1 class="number">1.</h1>
+    <h2>test your printer tolerance</h2>
+    <p>For the robot development kit to work well, correct tolerances are very important. Establishing a baseline measurement
+        for the tolerance of your 3D printer will make things easier for you. To measure your print tolerance, you can use one of 
+        many models provided free online. I've provided a few suggestions below, or you can use the one that you prefer. It is important 
+        to test your printer using the parameters that you will use while printing the robot development kit. So, for example, if you 
+        want to print the kit at 150% speed, you should also print the tolerance test with that same setting.
+    </p>
+    <ul>
+        <li><a href="https://www.thingiverse.com/thing:2318105">tolerance test by zapta on thingiverse</a></li>
+        <li><a href="https://www.printables.com/model/794623-tolerance-tester">tolerance tester by eliobou on printables</a></li>
+        <li><a href="https://www.printables.com/model/351316-tolerance-tester-20">tolerance tester 2.0 by jpdesign on printables</a></li>
+
+    </ul>
+</div>
+
+<div class="steps" id="download">
+    <h1 class="number">2.</h1>
+    <h2>download your starter pack</h2>
+    <p>Once you have an idea of your printer tolerance, you can download one of the zip files below! These files are meant to serve as a starting
+        point for printer tolerances that seem common on consumer FDM printers. If your print tolerance is not represented, you can jump to step 4 
+        (fine tune your fit). Unfortunately, <span class="bold">there is no guarantee that the parts provided in the .zip file
+        work correctly with your printer</span>. Instead, this is meant to be a starting point to make it easier for you. 
+    </p>
+    <ul>
+        <li><a href="https://www.thingiverse.com/thing:2318105">0.15 mm tolerance RDK download</a></li>
+        <li><a href="https://www.printables.com/model/794623-tolerance-tester">0.3 mm tolerance RDK download</a></li>
+        <li><a href="https://www.printables.com/model/351316-tolerance-tester-20">0.5 mm tolerance RDK download</a></li>
+
+    </ul>
+</div>
+
+<div class="steps" id="print">
+    <h1 class="number">3.</h1>
+    <h2>print a test</h2>
+    <p> The parts are designed to be printed with the cap using bridging (no supports). While this is not necessary, it makes 
+        preparing parts much easier. Whatever you choose, you should repeat the same parameters across the entire kit.
+        It is strongly recommended to print a couple of pieces first, especially a coupler and a static connector
+        cap. You should check that these have a comfortable amount of grip on a 1/2" PVC pipe, and also interlock with each other tightly. If tests
+        go well, then great! You can proceed. If not, you may need to fine tune your fit (step 4).
+    </p>
+    <div id="bridging">
+        <div><img src="images/part_without_supports.png"><span>✅</span></div>
+        <div><img src="images/part_with_supports.png"><span>❌</span></div>
+    </div>
+</div>
+
+<div class="steps" id="fine_tune">
+    <h1 class="number">4.</h1>
+    <h2>fine tune your fit</h2>
+    <p>To fine tune your fit, it is recommended to establish two measurements through test prints: the ideal size of caps and the ideal tolerance of 
+        the tongue of the tongue and groove connectors. Pick one or two caps to use to test these values bofre applying these same measurements
+        across the kit. Once you know the two measurements work for you, the rest should be easy!
+    </p>
+    <ul>
+        <li><a href="https://www.thingiverse.com/thing:2318105">0.15 mm tolerance RDK download</a></li>
+        <li><a href="https://www.printables.com/model/794623-tolerance-tester">0.3 mm tolerance RDK download</a></li>
+        <li><a href="https://www.printables.com/model/351316-tolerance-tester-20">0.5 mm tolerance RDK download</a></li>
+
+    </ul>
+</div>
+<div class="steps" id="fine_tune">
+    <h1 class="number">5.</h1>
+    <h2>print your own parts</h2>
+    <p>After using the kit, I hope that you are inspired to add more parts. Customizing RDK to your own use case allows for
+        even more creativity! Creating your own parts is very simple, with the most challenging part being the tongue-and-groove
+        design. I include the measurements here for a 0.5 mm tolerance design, so you will need to adjust them to your own fit!
+    </p>
+    <div id="byo">
+        <div><img id="cap" src="images/cap.png"></div>
+        <div><img id="tongue" src="images/tongue.png"></div>
+    </div>
+</div>
+
+</main>
+</body>

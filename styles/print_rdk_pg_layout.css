@@ -1,0 +1,104 @@
+body{
+  
+}
+main{
+    padding-top:40px;
+    /* margin: auto 15vw; */
+}
+h1{
+  
+    font-size:300%; 
+    width: 1070px;
+    
+    margin: auto;
+}
+
+h3{
+    width: 1000px;
+    font-size:180%;
+    font-weight:normal;
+    margin: auto;
+}
+
+h4{
+    font-size: 140%;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#page_title{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.steps{
+    
+    width: 1000px;
+    margin: auto;
+    border: solid 2px rgb(218, 220, 224);
+    background-color: rgba(237, 239, 243, 0.482);
+    border-radius: 5px;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+}
+
+.number{
+    display: inline;
+    font-size: 350%;
+    margin-right: 15px;
+}
+
+.steps > h2{
+    display: inline;
+    font-size: 250%;
+    font-weight: normal;
+}
+
+p, ul{
+    font-size: 120%;
+}
+
+li{
+    margin: 5px auto;
+}
+
+
+a{
+    color: #44b0de;
+    font-weight:bolder;
+}
+
+.bold{
+    font-weight: bolder;
+}
+
+#bridging{
+    display:flex;
+    justify-content: center;
+}
+
+#bridging > div > img{
+    width: 250px;
+}
+
+#bridging> div> span{
+    position:relative;
+    font-size: 300%;
+    right:40px;
+    top: 0px;
+}
+
+#byo{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    gap:20px;
+}
+
+#cap{
+    width: 250px;
+}
+
+#tongue{
+    width: 400px;
+}

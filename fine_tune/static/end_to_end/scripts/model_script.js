@@ -1,6 +1,6 @@
 const modelViewer = document.querySelector("model-viewer#model");
 let selected = false;
-const baseColor = [1, 1, 1];
+const baseColor = [.3, .3, .3];
 let highlight = [80/255, 200/255, 230/255];
 const orbitCycle = [
   '0deg 20deg 9m',

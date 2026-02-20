@@ -22,6 +22,7 @@ h1#site-map > a:hover{
     margin-top: 10vh;
     align-content: center;
     flex-wrap:wrap;
+    gap:20px;
 }
 
 #model-viewer{
@@ -65,3 +66,16 @@ h1#site-map > a:hover{
     background-color: #5A9AB5;
 }
 
+/* for pulley page */
+.model {
+  /* position: absolute;
+  inset: 0; */
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  display:none;
+  pointer-events: none;
+}
