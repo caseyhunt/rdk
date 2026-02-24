@@ -102,3 +102,7 @@ a{
 #tongue{
     width: 400px;
 }
+
+#fine_tune > ul{
+    list-style: none;
+}
