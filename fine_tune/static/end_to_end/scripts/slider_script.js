@@ -21,7 +21,7 @@ function initSlider(container) {
 
 document.getElementById("download_button").addEventListener("click", (e) => {
   getSliderValues();
-  const name = "model_files/model_download/connectors/end_to_end"
+  const name = "/model_files/model_download/connectors/end_to_end"
   // const safeName = name.replace(/[^a-z0-9_-]/gi, "_");
   console.log(file_attributes);
   const link = document.getElementById("download_link");
