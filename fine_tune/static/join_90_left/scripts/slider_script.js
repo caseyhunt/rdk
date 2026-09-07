@@ -25,7 +25,7 @@ document.getElementById("download_button").addEventListener("click", (e) => {
   // const safeName = name.replace(/[^a-z0-9_-]/gi, "_");
   console.log(file_attributes);
   const link = document.getElementById("download_link");
-  const fileName = `/join_90_l_${file_attributes[0]}_${file_attributes[1]}`;
+  const fileName = `/join_90_l_${file_attributes[0]}`;
 
   link.href = `${name}${fileName}.stl`;
   console.log(link.href);
