@@ -27,7 +27,7 @@ document.getElementById("download_button").addEventListener("click", (e) => {
   const link = document.getElementById("download_link");
   const fileName = `/ball_${file_attributes[0]}_${file_attributes[1]}_${file_attributes[2]}`;
 
-  link.href = `${name}${fileName}.zip`;
+  link.href = `${name}${fileName}.stl`;
   console.log(link.href);
   link.click();
 });
